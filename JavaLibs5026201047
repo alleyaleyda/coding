@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class JavaLibs5026201047 {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+// name
+        System.out.println("Write your name");
+        String name = scan.nextLine();
+
+        System.out.println("Write your friend's name");
+        String friendsName = scan.nextLine();
+
+// gender
+        System.out.println("What's your gender? (Male/Female)");
+        String gender = scan.nextLine();
+        System.out.println("What's your friend's gender? (Male/Female)");
+        String friendsGender = scan.nextLine();
+
+// year
+        System.out.println("Write your year birth");
+        int yearBirth = scan.nextInt();
+
+        System.out.println("What year is right now?");
+        int yearNow = scan.nextInt();
+
+        int age = yearNow - yearBirth;
+
+// height
+        System.out.println("Write your height (in meters) ");
+        double height = scan.nextDouble();
+
+        System.out.println("Write your friend's height (in meters) ");
+        double friendsHeight = scan.nextDouble();
+
+        double lebihTinggi = 0 ;
+        if (height >= friendsHeight) {
+            lebihTinggi = height - friendsHeight;
+        } else if (friendsHeight > height) {
+            lebihTinggi = friendsHeight - height;
+        }
+// hobby
+        System.out.println("Write your hobby");
+        String hobby = scan.next();
+
+// age differences
+        System.out.println("Write your friend's age");
+        int friendsAge = scan.nextInt();
+
+        int tua = 0;
+        if (friendsAge >= age) {
+            tua = friendsAge - age;
+        } else if (age > friendsAge) {
+            tua = age - friendsAge;
+        }
+// The Story
+        System.out.println(" I would like to introduce myself and one of my friend. My name is " + name + " and this is  " + friendsName + "." +
+                " My gender is " + gender + " and my friend's gender is " + friendsGender + "." + " I was born in " + yearBirth + " , so my age is " + age
+                + "." + " My height is " + height + " and his/her height is " + friendsHeight + "." + " In conclusion, our height differences are " + lebihTinggi
+                + "."+ " I have lots of hobbies, but my favorite one is " + hobby + "." + "Well, like i said before, my age right now is "
+                + age + " If we excludes our age, " + " our age differences will be " + tua + "." + " The End. ");
+    }
+}
